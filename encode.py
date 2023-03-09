@@ -3,10 +3,12 @@
 # Software Engineering
 
 def encode(password):
-    new = ''
+    new_password = []
     for i in range(0, len(password)):
-        new = chr(int(password[i]) + 3)
-    return password
+        new_password.append(str(int(password[i]) + 3))
+
+    new_password = ''.join(new_password)
+    return new_password
 
 
 def main():
@@ -21,10 +23,9 @@ def main():
         if choice == 1:
             password = input('Please enter your password to encode: ')
             encoded = encode(password)
-            print('Your password has been encoded and stored!')
+            print('Your password has been encoded and stored!\n')
         elif choice == 2:
-            print(f'The encoded password is {encoded} and your decoded password is {password}.')
-
+            print(f'The encoded password is {encoded} and your decoded password is {password}.\n')
 
 
 if __name__ == '__main__':
