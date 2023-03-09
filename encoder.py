@@ -5,7 +5,7 @@
 def encode(password):
     new = ''
     for i in range(0, len(password)):
-        new += chr(int(password[i]) + 3)
+        new = chr(int(password[i]) + 3)
     return password
 
 
@@ -23,7 +23,7 @@ def main():
             encoded = encode(password)
             print('Your password has been encoded and stored!')
         elif choice == 2:
-            print(f'The encoded password is {encoded}, and the decoded passworrd is {password}')
+            print(f'The encoded password is {encoded} and your decoded password is {password}.')
 
 
 
