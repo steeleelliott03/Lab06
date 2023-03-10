@@ -26,6 +26,27 @@ def main():
             print('Your password has been encoded and stored!\n')
         elif choice == 2:
             print(f'The encoded password is {encoded} and your decoded password is {password}.\n')
+  
+def password_encoder(password):
+    password = list(password)
+    for i in range(len(password)):
+        password[i] = int(password[i])
+        password[i] += 3
+        password[i] = str(password[i])
+
+    password = ''.join(password)
+    return password
+
+
+def password_decoder(password):
+    password = list(password)
+    for i in range(len(password)):
+        password[i] = int(password[i])
+        password[i] -= 3
+        password[i] = str(password[i])
+
+    password = ''.join(password)
+    return password
 
 
 if __name__ == '__main__':
